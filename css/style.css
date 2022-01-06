@@ -1,0 +1,6 @@
+.bg-imag-1 {
+  background-image: url("medias/accueil.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 650px;
+}
