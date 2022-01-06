@@ -14,9 +14,9 @@
     <title>EventsHome</title>
   </head>
   <body>
-    <section class="bg-imag-1">
+    <section class="bg-imag-1" style="background-image: url('medias/accueil.jpg');">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row bg-black bg-opacity-10">
           <div class="col-md-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
               <div class="container-fluid">
@@ -44,8 +44,34 @@
             </nav>
           </div>
         </div>
-        <img src="accueil.jpg" class="img-fluid" alt="">
+        <div class="row">
+          <div class="col-md-12">
+            <p></p>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center position-relative search">
+          <div class="col-md-8 d-flex justify-content-center">
+            <form class="row g-3 bg-white rounded-3 p-md-2 shadow-lg">
+              <div class="col-auto">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+      <img src="medias/img-trans-1.png" class="img-trans" alt="">
     </section>
 
     <!-- Optional JavaScript; choose one of the two! -->
