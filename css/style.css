@@ -1,3 +1,16 @@
+*  {
+  text-decoration: none!important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+a{
+  color: #000;
+}
+
+
 .bg-imag-1 {
   background-size: cover;
   background-position: bottom;
@@ -5,10 +18,32 @@
 }
 
 .img-trans {
-  height: 488px;
+  height: 376px;
   width: 100%;
+  top: 248px;
 }
 
 .search {
-  bottom: -375px;
+  bottom: -70px;
+  z-index: 1;
+}
+
+.text-shadow {
+  top: 65px;
+  font-size: 75px;
+  text-shadow: 4px 4px 10px #000000;
+}
+
+.i-size {
+  width: 115px;
+}
+
+.hover-1:hover {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 15px;
+  border-bottom: 10px solid red;
+}
+.hover-1:hover > div >img{
+  box-shadow: none!important;
+  border: 3px solid red!important;
 }
