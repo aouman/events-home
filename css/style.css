@@ -36,6 +36,18 @@ a{
   z-index: 1;
 }
 
+.search form {
+  border-radius: 15px;
+}
+
+.search input {
+  border-radius: 0 15px 15px 0px;
+}
+
+.search span {
+  border-radius: 15px 0px 0px 15px;
+}
+
 .text-shadow {
   top: 65px;
   font-size: 75px;
