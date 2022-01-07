@@ -15,6 +15,10 @@ a{
   color: #fff;
 }
 
+.bg-color{
+  background-color: #FF4500;
+}
+
 .bg-imag-1 {
   background-size: cover;
   background-position: bottom;
@@ -50,7 +54,7 @@ a{
 }
 .hover-1:hover > div >img{
   box-shadow: none!important;
-  border: 3px solid #FF4500!important;
+  border: 2px solid #FF4500!important;
 }
 
 .pr-2{
@@ -89,11 +93,11 @@ a{
   bottom: 13px;
 }
 
+.hover-2:hover > div >img{
+  box-shadow: none!important;
+  border: 2px solid #FF4500!important;
+}
 .ts-1 {
   top: 24px;
   font-size: 35px;
-}
-
-.bg-event-1 {
-  
 }
