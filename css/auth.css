@@ -1,0 +1,36 @@
+*  {
+  text-decoration: none!important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+a{
+  color: #000;
+}
+
+.btn-color{
+  background-color: #FF4500;
+  color: #fff;
+}
+
+.i-color{
+  color: #FF4500;
+}
+
+.bg-color{
+  background-color: #FF4500;
+}
+
+.log-card{
+  border-radius: 30px;
+}
+
+.img-log img {
+  width: 250px;
+}
+
+.btn-border {
+  border: 3px solid #FF4500;
+}
