@@ -70,8 +70,8 @@ a{
 }
 
 .pr-2{
-  top: 975px;
-  left: 808px;
+  top: -400px;
+  left: 13px;
   width: 315px;
 }
 
@@ -112,4 +112,8 @@ a{
 .ts-1 {
   top: 24px;
   font-size: 35px;
+}
+
+.tr-25 img{
+  width: 125px;
 }
