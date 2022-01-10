@@ -15,6 +15,10 @@ a{
   color: #fff;
 }
 
+.text-color {
+  color: #FF4500;
+}
+
 .i-color{
   color: #FF4500;
 }
@@ -57,4 +61,8 @@ a{
 
 .dropdown-toggle::after {
     display: none!important;
+}
+
+.a-ce-25 h1{
+  font-size: 80px;
 }
