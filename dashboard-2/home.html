@@ -12,7 +12,7 @@
     <title>Tableau de bord</title>
   </head>
   <body class="bg-light">
-    <section>
+    <!--section>
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 shadow-sm">
@@ -40,12 +40,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section-->
     <section>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-2 shadow-sm pe-0">
-            <div class="">
+          <div class="col-md-2 ps-0">
+            <div class="position-fixed mn-fixed h-100 bg-white shadow-sm">
               <ul class="list-group">
                 <li class="list-group-item border-0 bg-color-tr225 border-start border-5 border-danger mn-225 px-2">
                   <a href="#" class="d-flex align-items-center p-md-2 i-size">
@@ -56,7 +56,7 @@
                 <li class="list-group-item border-0 mn-225 px-2">
                   <a href="#" class="d-flex align-items-center p-md-2 i-size">
                     <span class="me-2"><i class="bi bi-info-lg fs-5"></i></span>
-                    Informations
+                    Presentations
                   </a>
                 </li>
                 <li class="list-group-item border-0 mn-225 px-2">
@@ -104,8 +104,31 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-10">
-            <div class="p-md-3">
+          <div class="col-md-10 ps-0">
+            <div class="fixed-top">
+              <div class="shadow-sm bg-white">
+                <nav class="navbar navbar-light">
+                  <div class="container-fluid">
+                    <div class="text-center">
+                      <a href="#">
+                        <img src="../medias/logo-1.png" width="120" alt="">
+                      </a>
+                    </div>
+                    <div class="dropdown i-user">
+                      <button class="btn rounded-circle border bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person"></i>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="p-md-3 mt-md-5">
               <h4 class="py-md-3">
                 <span class="me-2 btn btn-color"><i class="bi bi-speedometer2 fs-5"></i></span>
                 Accueil
