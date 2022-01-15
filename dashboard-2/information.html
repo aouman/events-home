@@ -114,13 +114,13 @@
               <div class="row">
                 <div class="d-flex align-items-start">
                   <div class="nav flex-column nav-pills me-3 bg-white p-md-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link text-start active" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="true">Informations</button>
-                    <button class="nav-link text-start" id="v-pills-Salles-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Salles" type="button" role="tab" aria-controls="v-pills-Salles" aria-selected="false">Salles</button>
-                    <button class="nav-link text-start" id="v-pills-service-tab" data-bs-toggle="pill" data-bs-target="#v-pills-service" type="button" role="tab" aria-controls="v-pills-service" aria-selected="false">Nos services</button>
-                    <button class="nav-link text-start" id="v-pills-Restaurant-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Restaurant" type="button" role="tab" aria-controls="v-pills-Restaurant" aria-selected="false">Restaurant</button>
-                    <button class="nav-link text-start" id="v-pills-Prix-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Prix" type="button" role="tab" aria-controls="v-pills-Prix" aria-selected="false">Prix</button>
-                    <button class="nav-link text-start" id="v-pills-lieu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lieu" type="button" role="tab" aria-controls="v-pills-lieu" aria-selected="false">Localisation</button>
-                    <button class="nav-link text-start" id="v-pills-photos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-photos" type="button" role="tab" aria-controls="v-pills-photos" aria-selected="false">Photos</button>
+                    <button class="nav-link text-start text-black active" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="true">Informations</button>
+                    <button class="nav-link text-start text-black" id="v-pills-Salles-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Salles" type="button" role="tab" aria-controls="v-pills-Salles" aria-selected="false">Salles</button>
+                    <button class="nav-link text-start text-black" id="v-pills-service-tab" data-bs-toggle="pill" data-bs-target="#v-pills-service" type="button" role="tab" aria-controls="v-pills-service" aria-selected="false">Nos services</button>
+                    <button class="nav-link text-start text-black" id="v-pills-Restaurant-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Restaurant" type="button" role="tab" aria-controls="v-pills-Restaurant" aria-selected="false">Restaurant</button>
+                    <button class="nav-link text-start text-black" id="v-pills-Prix-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Prix" type="button" role="tab" aria-controls="v-pills-Prix" aria-selected="false">Prix</button>
+                    <button class="nav-link text-start text-black" id="v-pills-lieu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lieu" type="button" role="tab" aria-controls="v-pills-lieu" aria-selected="false">Localisation</button>
+                    <button class="nav-link text-start text-black" id="v-pills-photos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-photos" type="button" role="tab" aria-controls="v-pills-photos" aria-selected="false">Photos</button>
                   </div>
                   <div class="tab-content w-100" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">
@@ -401,7 +401,29 @@
                             <div class="card-body">
                               <p class="">Donnez vos tarifs</p>
                               <form>
-                                
+                                <div class="row mb-3">
+                                  <label for="staticNumber" class="me-3 mb-3">Donner une grille tarifaire</label>
+                                  <div class="col-auto">
+                                    <div class="input-group flex-nowrap align-items-center">
+                                      <label for="staticNumber" class="me-3">De</label>
+                                      <input type="number" class="form-control" placeholder="100.000" aria-label="Username" aria-describedby="addon-wrapping">
+                                      <span class="input-group-text btn-color" id="addon-wrapping">FCFA</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <div class="input-group flex-nowrap align-items-center">
+                                      <label for="inputNumber" class="me-3">à</label>
+                                      <input type="number" class="form-control" placeholder="250.000" aria-label="Username" aria-describedby="addon-wrapping">
+                                      <span class="input-group-text btn-color" id="addon-wrapping">FCFA</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Autres informations sur vos tarifs</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                </div>
                                 <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
                               </form>
                             </div>
@@ -416,7 +438,12 @@
                             <div class="card-body">
                               <p class="">Donnez votre localisation</p>
                               <form>
-
+                                <div class="row">
+                                  <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Où etes-vous situé?</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                </div>
                                 <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
                               </form>
                             </div>
@@ -431,13 +458,18 @@
                             <div class="card-body">
                               <p class="">Mettez les images de votre espace ou de votre menu</p>
                               <form>
-
+                                <div class="mb-3">
+                                  <label for="formFileMultiple" class="form-label">Ajouter des photos</label>
+                                  <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                </div>
                                 <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
                               </form>
                             </div>
                           </div>
                           <div class="text-center">
-                            <button type="submit" class="btn rounded-pill bd-color shadow-sm">Voir toutes vos informations avant de les publier</button>
+                            <a href="#" class="btn rounded-pill bd-color shadow-sm">
+                              Voir toutes vos informations avant de les publier
+                            </a>
                           </div>
                         </div>
                       </div>
