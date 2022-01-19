@@ -88,3 +88,9 @@ a{
     color: #fff!important;
     background-color: #FF4500!important;
 }
+
+
+.calendar-inner {
+    max-width: calc(100% - 410px)!important;
+    margin-left: 170px;
+}
