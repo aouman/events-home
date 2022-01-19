@@ -203,10 +203,10 @@ a{
     border-top-right-radius: 5px;
 }
 .left-button:hover {
-    background: #3FADFF;
+    background: #52a0fd21;
 }
 .right-button:hover {
-    background: #00C1FF;
+    background: #52a0fd21;
 }
 
 /* Buttons */
@@ -222,18 +222,10 @@ a{
     transition: .2s ease all;
     color: white;
     border: none;
-    box-shadow: -1px 10px 20px #9BC6FD;
-    background: #52A0FD;
-    background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
-    background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
-    background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+    background: #ff4500;
 }
 #cancel-button {
-    box-shadow: -1px 10px 20px #FF7DAE;
-    background: #FF1744;
-    background: -moz-linear-gradient(left,  #FF1744 0%, #FF5D95 80%, #FF5D95 100%);
-    background: -webkit-linear-gradient(left,  #FF1744 0%, #FF5D95 80%, #FF5D95 100%);
-    background: linear-gradient(to right,  #FF1744 0%, #FF5D95 80%, #FF5D95 100%);
+
 }
 #add-button {
     display: block;
@@ -256,7 +248,7 @@ a{
 .day {
     height: 26px;
     width: 26px;
-    padding: 0 10px;
+    padding: 0 6px;
     line-height: 26px;
     border: 2px solid transparent;
     text-transform:uppercase;
@@ -301,16 +293,16 @@ a{
     transition: all 250ms;
 }
 .table-date:not(.nil):hover {
-    border-color: #FF1744;
-    box-shadow: 0 2px 6px RGBA(255, 50, 120, .9);
+    border-color: #FF4500;
+    box-shadow: 0 2px 6px #FF4500;
 }
 .event-date {
     border-color:#52A0FD;
     box-shadow: 0 2px 8px RGBA(130, 180, 255, .9);
 }
 .active-date{
-    background: #FF1744;
-    box-shadow: 0 2px 8px RGBA(255, 50, 120, .9);
+    background: #FF4500;
+    box-shadow: 0 2px 8px #FF4500;
     color: #fff;
 }
 .event-date.active-date {
@@ -331,14 +323,7 @@ a{
     display:none;
     border-left: 1px #aaa solid;
 }
-.dialog-header {
-    margin: 20px;
-    color:#333;
-    text-align: center;
-}
-.form-container {
-    margin-top:25%;
-}
+
 .form-label {
     color:#333;
 }
