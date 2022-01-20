@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/master.css">
     <link rel="stylesheet" href="../css/auth-responsive.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+    <!--quill editor-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
 
     <title>Reservation</title>
@@ -20,57 +22,63 @@
         <div class="row">
           <div class="col-md-2 ps-0">
             <div class="position-fixed mn-fixed h-100 bg-white shadow-sm">
-              <ul class="list-group">
-                <li class="list-group-item border-0 bg-color-tr225 border-start border-5 border-danger mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+              <ul class="list-group active-btn">
+                <li class="list-group-item border-0 border-5 border-danger mn-225 p-0">
+                  <a href="home.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-speedometer2 fs-5"></i></span>
                     Accueil
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="information.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-info-lg fs-5"></i></span>
                     Presentations
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="reservation.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-clipboard-check fs-5"></i></span>
                     Reservations
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-gem fs-5"></i></span>
                     Activités
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-cash-coin fs-5"></i></span>
                     Comptabilité
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-star-half fs-5"></i></span>
                     Promotion
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-archive fs-5"></i></span>
                     Stocks
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-lightbulb fs-5"></i></span>
                     Abonnement
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
+                    <span class="me-2"><i class="bi bi-patch-question fs-5"></i></span>
+                    Faq
+                  </a>
+                </li>
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-gear fs-5"></i></span>
                     Paramètre
                   </a>
@@ -227,27 +235,46 @@
                                 </div>
                                 <div class="events-container">
                                 </div>
-                                <div class="dialog" id="dialog">
+                                <div class="dialog p-md-3 p-2" id="dialog">
                                     <form class="form" id="form">
                                       <h2 class="my-md-4 my-2 text-center fs-6 text-uppercase fw-bold"> Ajouter une reservation </h2>
-
-                                      <div class="ps-md-5 ps-3" align="center">
-                                        <div class="form-floating mb-3">
-                                          <input type="text" class="form-control" id="name" maxlength="36" placeholder="Koffi Germain">
-                                          <label for="name">Nom et prénoms du client</label>
+                                      <div class="row">
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="text" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="name" maxlength="36" placeholder="Koffi Germain">
+                                          <label for="name">Nom du client</label>
                                         </div>
-                                        <div class="form-floating mb-3">
-                                          <input type="tel" class="form-control" id="tel-client" placeholder="+225 45782569103">
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="text" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="prenoms" placeholder="+Kan">
+                                          <label for="name">Prénoms du client</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="tel" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="tel-client" placeholder="+225 45782569103">
                                           <label for="tel">N° du client</label>
                                         </div>
-                                        <div class="form-floating mb-3">
-                                          <input type="datetime-local" class="form-control" id="date" min="0" max="1000000" maxlength="7" placeholder="Invités">
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="datetime-local" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="date" min="0" max="1000000" maxlength="7" placeholder="jj/mm/hh">
                                           <label for="date">Date et heure réservées</label>
                                         </div>
-                                        <div class="form-floating mb-3">
-                                          <input type="number" class="form-control" id="count" min="0" max="1000000" maxlength="7" placeholder="Invités">
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="text" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="space" placeholder="Espace rose">
+                                          <label for="space">Nom de l'espace réservé</label>
+                                        </div>
+                                        <div class="form-floating mb-3 col-md-6">
+                                          <input type="number" class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="count" min="0" max="1000000" maxlength="7" placeholder="5000">
                                           <label for="count">Nombre de clients</label>
                                         </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="mb-3">
+                                          <label for="exampleFormControlTextarea1" class="form-label">Autres services</label>
+                                          <div id="summernote2"></div>
+                                        </div>
+                                      </div>
+                                      <div class="ps-md-5 ps-3" align="center">
                                         <input type="button" value="Annuler" class="button me-md-5 me-3 bg-white text-black shadow bd-color" id="cancel-button">
                                         <input type="button" value="Enregistrer" class="button" id="ok-button">
                                       </div>
@@ -302,6 +329,61 @@
 
             </div>
           </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header bg-color text-white">
+                  <h5 class="modal-title w-100 text-center" id="exampleModalLabel">Information du client</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="card border-0">
+                    <div class="card-body shadow border-0">
+                      <ol class="list-group list-group-numbered">
+                        <li class="list-group-item border-0 d-flex justify-content-between align-items-start">
+                          <div class="ms-2 me-auto">
+                            <div class="fw-bold text-black-50">Nom et Prénom</div>
+                            Koffi Kan
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex justify-content-between align-items-start">
+                          <div class="ms-2 me-auto">
+                            <div class="fw-bold text-black-50">N° du client</div>
+                            +225 0845985214
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex justify-content-between align-items-start">
+                          <div class="ms-2 me-auto">
+                            <div class="fw-bold text-black-50">Nom de l'espace reservé</div>
+                            Espace rose
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex justify-content-between align-items-start">
+                          <div class="ms-2 me-auto ">
+                            <div class="fw-bold text-black-50">Nombre d'invité</div>
+                            4500 invités
+                          </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex justify-content-between align-items-start">
+                          <div class="ms-2 me-auto ">
+                            <div class="fw-bold text-black-50">Autres informations</div>
+                            je klqmdm mnd: d m,NDMJ §?Dmnndm ùm,nDMD M§?D m!d M DM§D Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn bd-color rounded-pill px-md-5" data-bs-dismiss="modal">Fermer</button>
+                  <button type="button" class="btn btn-color rounded-pill px-md-5"><span><i class="bi bi-pencil-square"></i></span> Modifier</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -321,6 +403,32 @@
     -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="../js-doc/index.js"></script>
+    <script type="text/javascript">
+    $('#summernote2').summernote({
+      placeholder: 'Donnez les informations aux utilisateurs sur vous',
+      tabsize: 2,
+      height: 120,
+      toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear', 'fontsize']],
+        ['color', ['forecolor', 'backcolor']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video', 'hr']],
+        ['view', ['help']],
+      ]
+    });
+    </script>
 
+    <script>
+      jQuery(function($) {
+          var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+            $(".active-btn > li > a").each(function(){
+            if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+            $(this).addClass("mn-225-active");
+            // $(this).parent("li").addClass("active");
+          })
+      });
+    </script>
   </body>
 </html>

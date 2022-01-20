@@ -123,6 +123,7 @@ a{
     clear:both;
 }
 .event-card {
+    cursor: pointer;
     padding: 20px 0;
     width: 350px;
     margin: 20px auto;

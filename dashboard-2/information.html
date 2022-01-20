@@ -33,57 +33,63 @@
         <div class="row">
           <div class="col-md-2 ps-0">
             <div class="position-fixed mn-fixed h-100 bg-white shadow-sm">
-              <ul class="list-group">
-                <li class="list-group-item border-0 bg-color-tr225 border-start border-5 border-danger mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+              <ul class="list-group active-btn">
+                <li class="list-group-item border-0 border-5 border-danger mn-225 p-0">
+                  <a href="home.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-speedometer2 fs-5"></i></span>
                     Accueil
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="information.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-info-lg fs-5"></i></span>
                     Presentations
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="reservation.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-clipboard-check fs-5"></i></span>
                     Reservations
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-gem fs-5"></i></span>
                     Activités
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-cash-coin fs-5"></i></span>
                     Comptabilité
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-star-half fs-5"></i></span>
                     Promotion
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-archive fs-5"></i></span>
                     Stocks
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-lightbulb fs-5"></i></span>
                     Abonnement
                   </a>
                 </li>
-                <li class="list-group-item border-0 mn-225 px-2">
-                  <a href="#" class="d-flex align-items-center p-md-2 i-size">
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
+                    <span class="me-2"><i class="bi bi-patch-question fs-5"></i></span>
+                    Faq
+                  </a>
+                </li>
+                <li class="list-group-item border-0 mn-225 p-0">
+                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-gear fs-5"></i></span>
                     Paramètre
                   </a>
@@ -562,6 +568,17 @@
              ['insert', ['link', 'picture', 'video', 'hr']],
              ['view', ['help']],
            ]
+         });
+       </script>
+
+       <script>
+         jQuery(function($) {
+             var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+               $(".active-btn > li > a").each(function(){
+               if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+               $(this).addClass("mn-225-active");
+               // $(this).parent("li").addClass("active");
+             })
          });
        </script>
   </body>

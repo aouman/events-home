@@ -46,6 +46,12 @@ a{
   color: #fff !important;
 }
 
+.mn-225-active {
+    background-color: #ff450033!important;
+    border-left: 2px solid #ff4500!important;
+    color: #FF4500 !important;
+}
+
 .i-size {
   font-size: 14px;
 }
@@ -82,6 +88,11 @@ a{
 .mn-fixed {
   top: 63px;
   width: 201px;
+}
+
+.py-md-13 {
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -121,6 +132,7 @@ a{
     clear:both;
 }
 .event-card {
+    cursor: pointer;
     padding: 20px 0;
     width: 350px;
     margin: 20px auto;
@@ -313,8 +325,8 @@ a{
     z-index: 5;
     background: #fff;
     position:absolute;
-    width:415px;
-    left:387px;
+    width: 465px;
+    left: 396px;
     display:none;
     border-left: 1px #aaa solid;
 }
@@ -339,6 +351,15 @@ a{
 }
 .error-input {
     border-color: #FF1744;
+}
+
+.dialog form div label {
+  font-size: 13px!important;
+}
+.dialog form div .form-control:focus {
+  background-color: #ff450014!important;
+  border-bottom: 3px solid #ff4500!important;
+  box-shadow: 0 0 0px 0rem #fff!important;
 }
 
 /* Tablets and smaller */
