@@ -129,7 +129,7 @@
                       <button class="nav-link text-black text-uppercase" id="pills-Plan-tab" data-bs-toggle="pill" data-bs-target="#pills-Plan" type="button" role="tab" aria-controls="pills-Plan" aria-selected="false">Plan comptable</button>
                     </li>
                   </ul>
-                  <div class="tab-content bg-white p-md-2" id="pills-tabContent">
+                  <div class="tab-content bg-white p-md-2 s225" id="pills-tabContent">
                     <div class="tab-pane fade show active bg-white p-md-4" id="pills-Facture" role="tabpanel" aria-labelledby="pills-Facture-tab">
                       <h5 class="fs-6 text-uppercase fw-light mb-3">Faite une facture</h5>
                       <form class="row">
@@ -190,7 +190,7 @@
                                   </div>
                                   <div class="">
                                     <table class="table table-bordered mb-0">
-                                      <thead class="bg-color t-hd">
+                                      <thead class="t-hd">
                                         <tr>
                                           <th scope="col" class="dropdown mb-2 p-0 text-center">
                                             <span class="dropdown-toggle btn px-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -295,7 +295,7 @@
                                               </td>
                                               <td class="table-active">0 <span>Fcfa</span></td>
                                             </tr>
-                                            <tr class="text-end bg-color t-hd">
+                                            <tr class="text-end t-hd">
                                               <td>Total TTC</td>
                                               <td>0 <span>Fcfa</span></td>
                                             </tr>
@@ -322,11 +322,10 @@
                             <div class="card-body">
                               <div class="card">
                                 <div class="card-body">
-                                  <label for="exampleColorInput" class="form-label">Choisir la couleur des entêtes</label>
-                                  <input type="color" class="form-control form-control-color w-100" id="exampleColorInput" value="#FF4500" title="Choose your color">
+                                  <label for="colorPicker" class="form-label">Choisir la couleur des entêtes</label>
+                                  <input type="color" class="form-control form-control-color w-100 input-color-picker" id="colorPicker" value="#FF4500" data-id="bg-color" name="Backgrounds">
                                 </div>
                               </div>
-
                               <button type="submit" name="button" class="btn bd-color w-100 rounded-pill mt-3">Enregistrer</button>
                             </div>
                           </div>
@@ -453,5 +452,7 @@
              })
          });
        </script>
+
+
   </body>
 </html>

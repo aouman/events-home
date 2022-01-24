@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//add ligne in facture
       const html = '<tr>'+
          '<td>'+
            '<span class="del">'+
@@ -24,5 +24,27 @@ $(document).ready(function(){
         $(this).parents('tr').remove();
     });
 
+    //colorPicker
+
+    const colorPicker = document.querySelectorAll("input.input-color-picker");
+
+    const colorUpdate = (cssVars) => {
+      const root = document.querySelector(":root");
+      const keys = Object.keys(cssVars);
+      keys.forEach((key) => {
+        root.style.setProperty(key, cssVars[key]);
+      });
+    };
+
+    colorPicker.forEach((item) => {
+      item.addEventListener("input", (e) => {
+        const cssPropName = `--primary-${e.target.getAttribute("data-id")}`;
+        console.log(cssPropName);
+        colorUpdate({
+          [cssPropName]: e.target.value
+        });
+      });
+
+    });
 
 });

@@ -40,6 +40,27 @@ a{
   background-color: #ff450033!important;
 }
 
+/*colorPicker*/
+.t-hd {
+  background: var(--primary-bg-color);
+	transition: all .16s ease-in-out;
+}
+
+:root {
+	--primary-bg-color: #FF4500;
+}
+/* end colorPicker*/
+
+.s225 form input,
+.s225 form textarea,
+.s225 form label,
+.s225 form th,
+.s225 form td,
+.s225 form td span,
+.s225 form select {
+  font-size: 12px;
+}
+
 .mn-225:hover{
   background-color: #ff450033!important;
   border-left: 2px solid #ff4500!important;
