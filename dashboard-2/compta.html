@@ -189,66 +189,71 @@
                                     </div>
                                   </div>
                                   <div class="">
-                                    <div class="dropdown mb-2">
-                                      <button class="btn bd-color bg-transparent text-black rounded-pill dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bi bi-plus-circle-dotted"></i> Colone
-                                      </button>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <ul class="list-group">
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Quantité
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Unité
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Qt.Totale
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            P.U HT
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Avancement
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            P.U TTC
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Remise HT
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Total HT
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            TVA %
-                                          </li>
-                                          <li class="list-group-item dropdown-item border-0">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Total TTC
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
                                     <table class="table table-bordered mb-0">
-                                      <thead class="bg-color">
+                                      <thead class="bg-color t-hd">
                                         <tr>
+                                          <th scope="col" class="dropdown mb-2 p-0 text-center">
+                                            <span class="dropdown-toggle btn px-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i class="bi bi-plus-circle-dotted"></i>
+                                            </span>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                              <ul class="list-group">
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Quantité
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Unité
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Qt.Totale
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  P.U HT
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Avancement
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  P.U TTC
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Remise HT
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Total HT
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  TVA %
+                                                </li>
+                                                <li class="list-group-item dropdown-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                  Total TTC
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </th>
                                           <th scope="col">Désignation</th>
                                           <th scope="col">Quantité</th>
                                           <th scope="col">P.U HT</th>
                                           <th scope="col">Total HT</th>
                                         </tr>
                                       </thead>
-                                      <tbody>
-                                        <tr>
+                                      <tbody class="border-light lign">
+                                        <tr class="box_d">
+                                          <td>
+                                            <span class="del">
+                                              <i class="bi bi-trash btn btn-danger text-white p-1 i-size py-0"></i>
+                                            </span>
+                                          </td>
                                           <td>
                                             <textarea class="form-control form-control-sm border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" placeholder="Désignation" id="floatingTextarea"></textarea>
                                           </td>
@@ -256,7 +261,7 @@
                                           <td><input type="number" class="form-control p-1" id="examplenumber1" aria-describedby="emailNumber"></td>
                                           <td class="table-active text-end">@mdo</td>
                                         </tr>
-                                          <td colspan="3" class="table-active"> <span class="btn btn-color"> <i class="bi bi-plus-circle"></i> Ajouter une ligne</span></td>
+                                          <td colspan="4" class="table-active"> <span class="btn btn-color" id="add-lign"> <i class="bi bi-plus-circle"></i> Ajouter une ligne</span></td>
                                           <td class="table-active text-end">@twitter</td>
                                       </tbody>
                                     </table>
@@ -290,9 +295,9 @@
                                               </td>
                                               <td class="table-active">0 <span>Fcfa</span></td>
                                             </tr>
-                                            <tr class="text-end">
-                                              <td class="bg-color">Total TTC</td>
-                                              <td class="bg-color">0 <span>Fcfa</span></td>
+                                            <tr class="text-end bg-color t-hd">
+                                              <td>Total TTC</td>
+                                              <td>0 <span>Fcfa</span></td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -418,18 +423,9 @@
 
     <!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/locales/LANG.js"></script>
+    <script src="../js-doc/app.js"></script>
+
     <!-- =====QUILL EDITOR====-->
-
-    <!--script>
-        $(document).ready(function() {
-            // initialize with defaults
-            $("#input-id").fileinput();
-
-            // with plugin options
-            $("#input-id").fileinput({'uploadUrl': '/path/to/your-upload-api', 'previewFileType': 'any'});
-        });
-      </script-->
-
       <script>
          $('.summernote').summernote({
            placeholder: 'Donnez les informations aux utilisateurs sur vous',
