@@ -49,6 +49,14 @@ a{
 :root {
 	--primary-bg-color: #FF4500;
 }
+
+.end-fac {
+  height: 2px;
+  width: 100%;
+}
+.end-fac-text {
+  font-size: 12px;
+}
 /* end colorPicker*/
 
 .s225 form input,
@@ -58,6 +66,30 @@ a{
 .s225 form td,
 .s225 form td span,
 .s225 form select {
+  font-size: 12px;
+}
+
+.head-inv225 .des {
+  width: 40%;
+  border: 2px solid #fff;
+}
+
+.head-inv225 .ht {
+  width: 25%;
+  border: 2px solid #fff;
+}
+
+.head-inv225 .pu {
+  width: 20%;
+  border: 2px solid #fff;
+}
+
+.head-inv225 .qt {
+  width: 106px;
+  border: 2px solid #fff;
+}
+
+.inv-lign li{
   font-size: 12px;
 }
 

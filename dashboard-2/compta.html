@@ -331,43 +331,133 @@
                           </div>
                         </div>
                       </form>
-                      <!--Modal pour ajouter un client-->
+                      <button name="button" class="btn bd-color w-100 rounded-pill mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Aperçu</button>
 
-                      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
+                      <!--Modal pour l'aperçu de la facture-->
+
+                      <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              Show a second modal and hide this one with the button below.
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="row g-3 align-items-center mb-4 px-2">
+                                      <div class="col-md-6">
+                                        <img src="../medias/logo-1.png" width="120" alt="">
+                                      </div>
+                                      <div class="col-md-6">
+                                        <span id="passwordHelpInline" class="form-text text-uppercase float-end">
+                                          Facture
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="">
+                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
+                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
+                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
+                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
+                                        </div>
+
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="p-md-4 p-2">
+                                          <div class="border rounded rounded-3 p-2">
+                                            <p>Client</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="row">
+                                          <div class="">
+                                            <p>Titre de la facture</p>
+                                          </div>
+                                        </div>
+                                        <div class="">
+                                          <table class="table table-bordered mb-0">
+                                            <thead class="t-hd">
+                                              <tr>
+                                                <th scope="col">Désignation</th>
+                                                <th scope="col">Quantité</th>
+                                                <th scope="col">P.U HT</th>
+                                                <th scope="col">Total HT</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody class="border-light lign">
+                                              <tr class="box_d">
+                                                <td>
+                                                  <p>chaussures</p>
+                                                </td>
+                                                <td><p>4</p> </td>
+                                                <td><p>5000 <span>Fcfa</span> </p> </td>
+                                                <td class="table-active text-end"><p>20.000 <span>Fcfa</span> </p> </td>
+                                              </tr>
+
+                                                <td colspan="6" class="table-active text-end"><p>Sous-total HT : 20.000 <span>Fcfa</span> </p> </td>
+                                            </tbody>
+                                          </table>
+                                          <div class="row">
+                                            <div class="col-md-4 pt-md-3"></div>
+                                            <div class="col-md-8">
+                                              <table class="table table-bordered">
+                                                <tbody>
+                                                  <tr class="text-end">
+                                                    <td>Remise HT</td>
+                                                    <td class="d-flex align-items-center justify-content-between">
+                                                      5000 <span>Fcfa</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr class="text-end">
+                                                    <td class="table-active">Total HT</td>
+                                                    <td class="table-active">0 <span>Fcfa</span> </td>
+                                                  </tr>
+                                                  <tr class="text-end">
+                                                    <td class="table-active d-flex align-items-center justify-content-end">
+                                                      TVA <span class="ps-3">25</span> %
+                                                    </td>
+                                                    <td class="table-active">0 <span>Fcfa</span></td>
+                                                  </tr>
+                                                  <tr class="text-end t-hd">
+                                                    <td>Total TTC</td>
+                                                    <td>0 <span>Fcfa</span></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-md-12 mt-5 pt-5">
+                                          <div class="text-center end-fac-text">
+                                            <div class="t-hd end-fac mb-2"></div>
+                                            <p>La flexibilité du document facilite les échanges et la mise en place de contrats dans un contexte BtoB. C'est une manière d'expliciter précisément tous les termes de l'échange sans s'engager.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                             <div class="modal-footer">
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              Hide this modal and show the first with the button below.
-                            </div>
-                            <div class="modal-footer">
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
 
-                      <!--FIN Modal pour ajouter un client-->
+                      <!--FIN Modal pour l'aperçu de la facture-->
                     </div>
                     <div class="tab-pane fade" id="pills-Devis" role="tabpanel" aria-labelledby="pills-Devis-tab">...</div>
                     <div class="tab-pane fade" id="pills-Plan" role="tabpanel" aria-labelledby="pills-Plan-tab">...</div>
