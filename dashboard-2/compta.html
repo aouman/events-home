@@ -54,7 +54,7 @@
                   </a>
                 </li>
                 <li class="list-group-item border-0 mn-225 p-0">
-                  <a href="#" class="d-flex align-items-center py-md-13 i-size ps-3">
+                  <a href="promo.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-star-half fs-5"></i></span>
                     Promotion
                   </a>
@@ -141,10 +141,10 @@
                             <div class="card">
                               <div class="card-body">
                                 <div class="d-flex align-items-start justify-content-between">
-                                  <div class="text-center">
+                                  <div class="text-center ps-md-4">
                                     <div class="mb-3">
                                       <div id='img_contain'>
-                                        <img id="image-preview" align='middle'src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="your image" width="120" title=''/>
+                                        <img class="image-preview" id="" align='middle'src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="your image" width="120" title=''/>
                                       </div>
                                       <div class="">
                                         <label class="px-3 mt-3 py-1 bd-color rounded-pill " onclick="document.getElementById('file-input').click()">Ajouter votre logo</Label>
@@ -157,7 +157,7 @@
                                   </div>
                                 </div>
                                 <div class="">
-                                    <div class="container">
+                                    <div class="container-fluid">
                                       <div class="row clearfix">
                                         <div class="col-md-12">
                                           <table class="table table-bordered" id="tab_logic">
@@ -221,10 +221,6 @@
                                                   </div>
                                                 </td>
                                               </tr>
-                                              <!--tr>
-                                                <th class="text-center">CGST Tax Amount</th>
-                                                <td class="text-center"><input type="number" name='tax_amount' id="tax_amount" placeholder='0.00' class="form-control" readonly/></td>
-                                              </tr-->
                                               <tr class="t-hd">
                                                 <th class="text-center">Total Général</th>
                                                 <td class="text-center">
@@ -246,6 +242,14 @@
                                           </div>
                                         </div>
                                       </div>
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                          <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Information de pied de facture</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
 
@@ -253,8 +257,132 @@
                             </div>
                             <div class="bt-2 text-center p-md-4 p-2">
                               <button class="btn bg-color text-white rounded-pill px-md-5 shadow-sm" type="submit" name="button">Enregistrer</button>
-                              <span class="btn bd-color rounded-pill px-md-5 shadow-sm ms-md-5"> Aperçu </span>
+                              <span class="btn bd-color rounded-pill px-md-5 shadow-sm ms-md-5" data-bs-toggle="modal" data-bs-target="#invoiceBackdrop"> Aperçu </span>
                             </div>
+
+                            <!--Popup for view invoice-->
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="invoiceBackdrop" data-bs-backdrop="invoice" data-bs-keyboard="false" tabindex="-1" aria-labelledby="invoiceBackdropLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title text-uppercase" id="invoiceBackdropLabel">Facture</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <div class="container-fluid">
+                                          <div class="row">
+                                            <div class="col-md-3">
+                                              <img class="image-preview" src="" alt="" width="120">
+                                              <p class="fs-1">Rikudo</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                              <p>Pour une agriculture saine, rentable et respectueuse de l’environnement</p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                              <p>Réf Client : </p>
+                                              <p>Tel Client : </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <p class="float-end">Fait à Abidjan le : </p>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-12">
+                                              <table class="table table-bordered">
+                                                <thead class="t-hd text-center">
+                                                  <tr>
+                                                    <th scope="col" class="fs-6">Désignation</th>
+                                                    <th scope="col" class="fs-6">Quantité</th>
+                                                    <th scope="col" class="fs-6">Prix U</th>
+                                                    <th scope="col" class="fs-6">Total HT</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="text-center v-inv">
+                                                  <tr>
+                                                    <td>Mark</td>
+                                                    <td>25</td>
+                                                    <td>100</td>
+                                                    <td><span class="pe-2"> 2500 </span> Fcfa</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                          <div class="row clearfix" style="margin-top:20px">
+                                            <div class="col-md-7"></div>
+                                            <div class="col-md-5">
+                                              <table class="table table-bordered" id="tab_logic_total">
+                                                <tbody class="v-inv">
+                                                  <tr>
+                                                    <th class="text-center">Sous-Total</th>
+                                                    <td class="text-center">
+                                                      <div class="d-flex align-items-center justify-content-end">
+                                                        2500
+                                                        <span class="input-group-text bg-white border-0">Fcfa</span>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th class="text-center">
+                                                      TAX : <span>25</span> %
+                                                    </th>
+                                                    <td class="text-center">
+                                                      <div class="d-flex align-items-center justify-content-end">
+                                                        500
+                                                        <span class="input-group-text bg-white border-0">Fcfa</span>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr class="t-hd">
+                                                    <th class="text-center">Total Général</th>
+                                                    <td class="text-center">
+                                                      <div class="d-flex align-items-center justify-content-end">
+                                                        6500
+                                                        <span class="input-group-text t-hd border-0">Fcfa</span>
+                                                      </div>
+                                                      </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                            <div class="col-md-12">
+                                              <div class="text-start">
+                                                <p>La somme 150.000 Fcfa à eté verser</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <br><br><br><br><br><br>
+                                          <hr class="t-hd">
+                                          <div class="row">
+                                            <div class="col-md-12">
+                                              <div class="text-center">
+                                                <p>COCOSOL, SARL au capital de 1.000.000 FCFA, 27 BP 707 ABJ 27, Cote D’Ivoire.
+N°CC 1409905 A - N°RCCM CI-ABJ-2014-B-5120 - Cpte ECOBANK N° CI 059 01034 221222536501
+Tél: (225) 22433884 / 78732600 / 47842699 - Email:cocosol1@live.com - Skype:spaceman_4000</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn bd-color rounded-pill px-md-5 shadow-sm" data-bs-dismiss="modal"><i class="bi bi-arrow-left-circle text-color pe-2"></i> Retour à la facture</button>
+                                    <!--button type="button" class="btn btn-primary">Understood</button-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--End Popup for view invoice-->
+
                           </form>
                         </div>
                       </div>

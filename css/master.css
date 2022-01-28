@@ -143,6 +143,14 @@ a{
   width: 201px;
 }
 
+hr:not([size]) {
+    height: 3px!important;
+}
+
+.v-inv td {
+  font-size: 14px!important;
+}
+
 .py-md-13 {
     padding-top: 13px;
     padding-bottom: 13px;
