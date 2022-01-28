@@ -131,333 +131,133 @@
                   </ul>
                   <div class="tab-content bg-white p-md-2 s225" id="pills-tabContent">
                     <div class="tab-pane fade show active bg-white p-md-4" id="pills-Facture" role="tabpanel" aria-labelledby="pills-Facture-tab">
-                      <h5 class="fs-6 text-uppercase fw-light mb-3">Faite une facture</h5>
-                      <form class="row">
-                        <div class="col-md-8">
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="row g-3 align-items-center mb-4 px-2">
-                                <div class="col-md-6">
-                                  <input type="file" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                </div>
-                                <div class="col-md-6">
-                                  <span id="passwordHelpInline" class="form-text text-uppercase float-end">
-                                    Facture
-                                  </span>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-floating">
-                                    <input type="date" class="form-control mb-2 border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="floatingDate" placeholder="Date d'écriture">
-                                    <label for="floatingDate">Date d'écriture</label>
-                                  </div>
-                                  <div class="form-floating">
-                                    <input type="number" class="form-control mb-2 border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="floatingDate" placeholder="Date d'écriture">
-                                    <label for="floatingDate">N° de facture</label>
-                                  </div>
-                                  <div class="form-floating">
-                                    <input type="date" class="form-control mb-2 border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="floatingDate" placeholder="Date d'écriture">
-                                    <label for="floatingDate">Date de livraison</label>
-                                  </div>
-                                  <div class="row">
-                                    <div class="form-floating mb-3">
-                                      <textarea class="form-control mb-2 border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                      <label for="floatingTextarea">Autres innformations</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="shadow p-md-4 p-2">
-                                    <select class="form-select mb-3" aria-label="Default select example">
-                                      <option selected>Selectionner le client</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
-                                    </select>
-                                    <button type="button" name="button" class="btn btn-light w-100" data-bs-toggle="modal" data-bs-target="#addClient"><i class="bi bi-plus-circle-dotted"></i> Ajouter un client</button>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <div class="row">
-                                    <div class="form-floating mb-1">
-                                      <input type="text" class="form-control mb-2 border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="floatingText" placeholder="Nom de la facture">
-                                      <label for="floatingText">Titre de la facture</label>
+                      <div class="card">
+                        <div class="card-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="colorPicker" class="form-label">Choisir la couleur des entêtes</label>
+                              <input type="color" class="form-control form-control-color w-100 input-color-picker" id="colorPicker" value="#FF4500" data-id="bg-color" name="Backgrounds">
+                            </div>
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="d-flex align-items-start justify-content-between">
+                                  <div class="text-center">
+                                    <div class="mb-3">
+                                      <div id='img_contain'>
+                                        <img id="image-preview" align='middle'src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="your image" width="120" title=''/>
+                                      </div>
+                                      <div class="">
+                                        <label class="px-3 mt-3 py-1 bd-color rounded-pill " onclick="document.getElementById('file-input').click()">Ajouter votre logo</Label>
+                                        <input type='file' id="file-input" style="display:none">
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="">
-                                    <table class="table table-bordered mb-0">
-                                      <thead class="t-hd">
-                                        <tr>
-                                          <th scope="col" class="dropdown mb-2 p-0 text-center">
-                                            <span class="dropdown-toggle btn px-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                              <i class="bi bi-plus-circle-dotted"></i>
-                                            </span>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                              <ul class="list-group">
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Quantité
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Unité
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Qt.Totale
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  P.U HT
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Avancement
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  P.U TTC
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Remise HT
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Total HT
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  TVA %
-                                                </li>
-                                                <li class="list-group-item dropdown-item border-0">
-                                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                                  Total TTC
-                                                </li>
-                                              </ul>
-                                            </div>
-                                          </th>
-                                          <th scope="col">Désignation</th>
-                                          <th scope="col">Quantité</th>
-                                          <th scope="col">P.U HT</th>
-                                          <th scope="col">Total HT</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody class="border-light lign">
-                                        <tr class="box_d">
-                                          <td>
-                                            <span class="del">
-                                              <i class="bi bi-trash btn btn-danger text-white p-1 i-size py-0"></i>
-                                            </span>
-                                          </td>
-                                          <td>
-                                            <textarea class="form-control form-control-sm border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" placeholder="Désignation" id="floatingTextarea"></textarea>
-                                          </td>
-                                          <td><input type="number" class="form-control p-1" id="examplenumber1" aria-describedby="emailNumber"></td>
-                                          <td><input type="number" class="form-control p-1" id="examplenumber1" aria-describedby="emailNumber"></td>
-                                          <td class="table-active text-end">@mdo</td>
-                                        </tr>
-                                          <td colspan="4" class="table-active"> <span class="btn btn-color" id="add-lign"> <i class="bi bi-plus-circle"></i> Ajouter une ligne</span></td>
-                                          <td class="table-active text-end">@twitter</td>
-                                      </tbody>
-                                    </table>
-                                    <div class="row">
-                                      <div class="col-md-4 pt-md-3">
-                                        <label for="exampleDataList" class="form-label">Sélectionnner votre devise</label>
-                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Choisir">
-                                        <datalist id="datalistOptions">
-                                          <option value="Fcfa">
-                                          <option value="Cedi ₵">
-                                          <option value="Naira ₦">
-                                        </datalist>
-                                      </div>
-                                      <div class="col-md-8">
-                                        <table class="table table-bordered">
-                                          <tbody>
-                                            <tr class="text-end">
-                                              <td>Remise HT</td>
-                                              <td class="d-flex align-items-center justify-content-between">
-                                                <input type="number" class="form-control w-75 text-end border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" id="exampleInumber1" aria-describedby="emailHelp" placeholder="0">
-                                                <span>Fcfa</span>
-                                              </td>
-                                            </tr>
-                                            <tr class="text-end">
-                                              <td class="table-active">Total HT</td>
-                                              <td class="table-active">0 <span>Fcfa</span> </td>
-                                            </tr>
-                                            <tr class="text-end">
-                                              <td class="table-active d-flex align-items-center justify-content-end">TVA
-                                                <input type="number" class="form-control w-25 ms-3 p-1" id="examplenumber1" aria-describedby="emailNumber"> %
-                                              </td>
-                                              <td class="table-active">0 <span>Fcfa</span></td>
-                                            </tr>
-                                            <tr class="text-end t-hd">
-                                              <td>Total TTC</td>
-                                              <td>0 <span>Fcfa</span></td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
-                                    </div>
+                                    <p class="text-uppercase fs-3 text-muted">Facture</p>
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="form-floating">
-                                      <textarea class="form-control border border-bottom border-end-0 border-start-0 border-top-0 rounded-0" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                      <label for="floatingTextarea">Information du pied de la facture</label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="card">
-                                <div class="card-body">
-                                  <label for="colorPicker" class="form-label">Choisir la couleur des entêtes</label>
-                                  <input type="color" class="form-control form-control-color w-100 input-color-picker" id="colorPicker" value="#FF4500" data-id="bg-color" name="Backgrounds">
-                                </div>
-                              </div>
-                              <button type="submit" name="button" class="btn bd-color w-100 rounded-pill mt-3">Enregistrer</button>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                      <button name="button" class="btn bd-color w-100 rounded-pill mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Aperçu</button>
-
-                      <!--Modal pour l'aperçu de la facture-->
-
-                      <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="col-md-12">
-                                <div class="card">
-                                  <div class="card-body">
-                                    <div class="row g-3 align-items-center mb-4 px-2">
-                                      <div class="col-md-6">
-                                        <img src="../medias/logo-1.png" width="120" alt="">
-                                      </div>
-                                      <div class="col-md-6">
-                                        <span id="passwordHelpInline" class="form-text text-uppercase float-end">
-                                          Facture
-                                        </span>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-6">
-                                        <div class="">
-                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
-                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
-                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
-                                          <p>Date d'écriture : <span>25/02/2022</span> </p>
-                                        </div>
-
-                                      </div>
-                                      <div class="col-md-6">
-                                        <div class="p-md-4 p-2">
-                                          <div class="border rounded rounded-3 p-2">
-                                            <p>Client</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="row">
-                                      <div class="col-md-12">
-                                        <div class="row">
-                                          <div class="">
-                                            <p>Titre de la facture</p>
-                                          </div>
-                                        </div>
-                                        <div class="">
-                                          <table class="table table-bordered mb-0">
+                                <div class="">
+                                    <div class="container">
+                                      <div class="row clearfix">
+                                        <div class="col-md-12">
+                                          <table class="table table-bordered" id="tab_logic">
                                             <thead class="t-hd">
                                               <tr>
-                                                <th scope="col">Désignation</th>
-                                                <th scope="col">Quantité</th>
-                                                <th scope="col">P.U HT</th>
-                                                <th scope="col">Total HT</th>
+                                                <th class="text-center"> # </th>
+                                                <th class="text-center"> Désignation </th>
+                                                <th class="text-center"> Quantité </th>
+                                                <th class="text-center"> Prix </th>
+                                                <th class="text-center"> Total </th>
                                               </tr>
                                             </thead>
-                                            <tbody class="border-light lign">
-                                              <tr class="box_d">
+                                            <tbody>
+                                              <tr id='addr0'>
+                                                <td>1</td>
+                                                <td><input type="text" name='product[]'  placeholder='Entrer une désignation' class="form-control"/></td>
+                                                <td><input type="number" name='qty[]' placeholder='Entrer une quantité' class="form-control qty" step="0" min="0"/></td>
+                                                <td><input type="number" name='price[]' placeholder='Entrer un prix' class="form-control price" step="0.00" min="0"/></td>
                                                 <td>
-                                                  <p>chaussures</p>
+                                                  <div class="input-group">
+                                                    <input type="number" name='total[]' placeholder='0.00' class="form-control total" readonly/>
+                                                    <span class="input-group-text" id="basic-addon2">Fcfa</span>
+                                                  </div>
                                                 </td>
-                                                <td><p>4</p> </td>
-                                                <td><p>5000 <span>Fcfa</span> </p> </td>
-                                                <td class="table-active text-end"><p>20.000 <span>Fcfa</span> </p> </td>
                                               </tr>
-
-                                                <td colspan="6" class="table-active text-end"><p>Sous-total HT : 20.000 <span>Fcfa</span> </p> </td>
+                                              <tr id='addr1'></tr>
                                             </tbody>
                                           </table>
-                                          <div class="row">
-                                            <div class="col-md-4 pt-md-3"></div>
-                                            <div class="col-md-8">
-                                              <table class="table table-bordered">
-                                                <tbody>
-                                                  <tr class="text-end">
-                                                    <td>Remise HT</td>
-                                                    <td class="d-flex align-items-center justify-content-between">
-                                                      5000 <span>Fcfa</span>
-                                                    </td>
-                                                  </tr>
-                                                  <tr class="text-end">
-                                                    <td class="table-active">Total HT</td>
-                                                    <td class="table-active">0 <span>Fcfa</span> </td>
-                                                  </tr>
-                                                  <tr class="text-end">
-                                                    <td class="table-active d-flex align-items-center justify-content-end">
-                                                      TVA <span class="ps-3">25</span> %
-                                                    </td>
-                                                    <td class="table-active">0 <span>Fcfa</span></td>
-                                                  </tr>
-                                                  <tr class="text-end t-hd">
-                                                    <td>Total TTC</td>
-                                                    <td>0 <span>Fcfa</span></td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row clearfix">
+                                        <div class="col-md-12">
+                                          <span id="add_row" class="btn btn-color"> <i class="bi bi-plus-circle"></i> Ajouter une ligne</span>
+                                          <span id='delete_row' class="btn bd-color float-end"><i class="bi bi-trash text-danger p-1 i-size py-0"></i> Supprimer une ligne</span>
+                                        </div>
+                                      </div>
+                                      <div class="row clearfix" style="margin-top:20px">
+                                        <div class="col-md-7"></div>
+                                        <div class="col-md-5">
+                                          <table class="table table-bordered" id="tab_logic_total">
+                                            <tbody class="table-active">
+                                              <tr>
+                                                <th class="text-center">Sous-Total</th>
+                                                <td class="text-center">
+                                                  <div class="input-group">
+                                                    <input type="number" name='sub_total' placeholder='0.00' class="form-control" id="sub_total" readonly/>
+                                                    <span class="input-group-text" id="basic-addon2">Fcfa</span>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th class="text-center d-flex align-items-center justify-content-end">
+                                                  TAX
+                                                    <input type="number" class="form-control" id="tax1" placeholder="0">
+                                                    %
+                                                  </th>
+                                                <td class="text-center">
+                                                  <div class="input-group">
+                                                    <input type="number" name='tax_amount' id="tax_amount" placeholder='0.00' class="form-control" readonly/>
+                                                    <span class="input-group-text" id="basic-addon2">Fcfa</span>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <!--tr>
+                                                <th class="text-center">CGST Tax Amount</th>
+                                                <td class="text-center"><input type="number" name='tax_amount' id="tax_amount" placeholder='0.00' class="form-control" readonly/></td>
+                                              </tr-->
+                                              <tr class="t-hd">
+                                                <th class="text-center">Total Général</th>
+                                                <td class="text-center">
+                                                  <div class="input-group">
+                                                    <input type="number" name='total_amount' id="total_amount" placeholder='0.00' class="form-control" readonly/>
+                                                    <span class="input-group-text" id="basic-addon2">Fcfa</span>
+                                                  </div>
+                                                  </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
                                         </div>
                                       </div>
                                       <div class="row">
-                                        <div class="col-md-12 mt-5 pt-5">
-                                          <div class="text-center end-fac-text">
-                                            <div class="t-hd end-fac mb-2"></div>
-                                            <p>La flexibilité du document facilite les échanges et la mise en place de contrats dans un contexte BtoB. C'est une manière d'expliciter précisément tous les termes de l'échange sans s'engager.</p>
+                                        <div class="col-md-12">
+                                          <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
                                 </div>
+
                               </div>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
+                            <div class="bt-2 text-center p-md-4 p-2">
+                              <button class="btn bg-color text-white rounded-pill px-md-5 shadow-sm" type="submit" name="button">Enregistrer</button>
+                              <span class="btn bd-color rounded-pill px-md-5 shadow-sm ms-md-5"> Aperçu </span>
                             </div>
-                          </div>
+                          </form>
                         </div>
                       </div>
-
-                      <!--FIN Modal pour l'aperçu de la facture-->
                     </div>
                     <div class="tab-pane fade" id="pills-Devis" role="tabpanel" aria-labelledby="pills-Devis-tab">...</div>
                     <div class="tab-pane fade" id="pills-Plan" role="tabpanel" aria-labelledby="pills-Plan-tab">...</div>
@@ -506,13 +306,16 @@
 
     <!-- the main fileinput plugin script JS file -->
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/fileinput.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- following theme script is needed to use the Font Awesome 5.x theme (`fas`). Uncomment if needed. -->
     <!-- script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/themes/fas/theme.min.js"></script -->
 
     <!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/locales/LANG.js"></script>
     <script src="../js-doc/app.js"></script>
+    <script src="../js-doc/invoice.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- =====QUILL EDITOR====-->
       <script>
@@ -542,7 +345,6 @@
              })
          });
        </script>
-
 
   </body>
 </html>
