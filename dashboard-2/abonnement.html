@@ -14,7 +14,7 @@
 
 
 
-    <title>Promotions</title>
+    <title>Abonnement</title>
   </head>
   <body class="bg-light">
     <section>
@@ -42,7 +42,7 @@
                   </a>
                 </li>
                 <li class="list-group-item border-0 mn-225 p-0">
-                  <a href="activity" class="d-flex align-items-center py-md-13 i-size ps-3">
+                  <a href="activity.html" class="d-flex align-items-center py-md-13 i-size ps-3">
                     <span class="me-2"><i class="bi bi-gem fs-5"></i></span>
                     Activités
                   </a>
@@ -113,9 +113,9 @@
             <div class="p-md-3 mt-md-5">
               <h4 class="py-md-3">
                 <span class="me-2 btn btn-color">
-                  <i class="bi bi-star-half fs-5"></i>
+                  <i class="bi bi-lightbulb fs-5"></i>
                 </span>
-                Promotion
+                Abonnement
               </h4>
               <p></p>
               <div class="">
@@ -123,34 +123,106 @@
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-body p-md-5">
-                        <div class="card w-50 mx-auto shadow border-0 mb-3">
+                      <div class="card mx-auto border-0 mb-3">
+                        <div class="card border-0 shadow rounded rounded-3" id="del-1">
                           <div class="card-body">
-                            <form>
-                              <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Indication</label>
-                              </div>
-                              <div class="row g-2 mb-3">
-                                <div class="col-md">
-                                  <div class="form-floating">
-                                    <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-                                    <label for="floatingInputGrid">Pourcentage %</label>
+                            <form class="">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="card border-0">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center mb-3 text-uppercase fw-bold">Abonnez-vous par carte bancaire</h5>
+                                      <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="254789632541">
+                                        <label for="floatingTextarea">Nom du détenteur</label>
+                                      </div>
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="254789632541">
+                                        <label for="floatingTextarea">N° de la carte</label>
+                                      </div>
+                                      <div class="row g-2">
+                                        <div class="col-md">
+                                          <div class="form-floating mb-3">
+                                            <input type="date" class="form-control" id="floatingInput" placeholder="12/2/2022">
+                                            <label for="floatingInputGrid">Date d'espiration</label>
+                                          </div>
+                                        </div>
+                                        <div class="col-md">
+                                          <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="CVC">
+                                            <label for="floatingSelectGrid">CV CODE</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="4552">
+                                        <label for="floatingTextarea">Code du coupon</label>
+                                      </div>
+                                      <button type="submit" class="btn w-100 bd-color rounded-pill fs-5 text-uppercase fw-light">Abonnez-vous</button>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="col-md">
-                                  <div class="form-floating">
-                                    <input type="date" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-                                    <label for="floatingInputGrid">Date d'expiration</label>
+                                <div class="col-sm-6">
+                                  <div class="card bg-color shadow border-0 h-100 p-md-5">
+                                    <div class="card-body text-center">
+                                      <div class="icon-width border rounded-circle mx-auto mb-4 bg-color text-white shadow border-4 border-white">
+                                        <i class="bi bi-credit-card"></i>
+                                      </div>
+                                      <span class="btn bd-color bg-white text-black rounded-pill shadow text-uppercase" id="mobile">Par mobile money</span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                              <button type="submit" class="btn bg-color w-100 rounded-pill text-white">Faite la promotion</button>
                             </form>
                           </div>
                         </div>
-                        <div class="card">
+
+                        <div class="card border-0 shadow rounded rounded-3 d-del" id="del-2">
                           <div class="card-body">
-                            This is some text within a card body.
+                            <form class="">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="card bg-color shadow border-0">
+                                    <div class="card-body text-center">
+                                      <div class="icon-width border rounded-circle mx-auto mb-4 bg-color text-white shadow border-4 border-white">
+                                        <i class="bi bi-coin"></i>
+                                      </div>
+                                      <span class="btn bd-color bg-white text-black rounded-pill shadow text-uppercase" id="bank">Par carte bancaire</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="card border-0">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center mb-3 text-uppercase fw-bold">Abonnez-vous par mobile money</h5>
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="254789632541">
+                                        <label for="floatingTextarea">N° de la carte</label>
+                                      </div>
+                                      <div class="row g-2">
+                                        <div class="col-md">
+                                          <div class="form-floating mb-3">
+                                            <input type="date" class="form-control" id="floatingInput" placeholder="12/2/2022">
+                                            <label for="floatingInputGrid">Date d'espiration</label>
+                                          </div>
+                                        </div>
+                                        <div class="col-md">
+                                          <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="CVC">
+                                            <label for="floatingSelectGrid">CV CODE</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="4552">
+                                        <label for="floatingTextarea">Code du coupon</label>
+                                      </div>
+                                      <button type="submit" class="btn w-100 bd-color rounded-pill fs-5 text-uppercase fw-light">Abonnez-vous</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
                           </div>
                         </div>
                       </div>

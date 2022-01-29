@@ -167,6 +167,18 @@ hr:not([size]) {
     margin-left: 170px;
 }
 
+.icon-width {
+  width: 230px;
+}
+
+.icon-width i{
+  font-size: 150px;
+}
+
+.d-del {
+  display: none;
+}
+
 /*Calendrier css*/
 
 /* Overall body and content */
