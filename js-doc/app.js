@@ -69,4 +69,45 @@ $(document).ready(function(){
           $("#del-2").addClass('d-del');
         });
 
+        //active menu
+        jQuery(function($) {
+            var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+              $(".active-btn > li > a").each(function(){
+              if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+              $(this).addClass("mn-225-active");
+              // $(this).parent("li").addClass("active");
+            })
+        });
+
+        //Quill EDITOR
+
+        $('.summernote').summernote({
+          placeholder: 'Donnez les informations aux utilisateurs sur vous',
+          tabsize: 2,
+          height: 120,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear', 'fontsize']],
+            ['color', ['forecolor', 'backcolor']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video', 'hr']],
+            ['view', ['help']],
+          ]
+        });
+
 });
+
+  (function() {
+    var copyButton = document.querySelector('.copy button');
+    var copyInput = document.querySelector('.copy input');
+    copyButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      var text = copyInput.select();
+      document.execCommand('copy');
+    });
+
+    copyInput.addEventListener('click', function() {
+      this.select();
+    });
+  })();

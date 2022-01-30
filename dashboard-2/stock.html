@@ -113,7 +113,7 @@
             <div class="p-md-3 mt-md-5">
               <h4 class="py-md-3">
                 <span class="me-2 btn btn-color">
-                  <i class="bi bi-star-half fs-5"></i>
+                  <i class="bi bi-archive fs-5"></i>
                 </span>
                 Stocks
               </h4>
@@ -123,31 +123,6 @@
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-body p-md-5">
-                        <div class="card w-50 mx-auto shadow border-0 mb-3">
-                          <div class="card-body">
-                            <form>
-                              <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Indication</label>
-                              </div>
-                              <div class="row g-2 mb-3">
-                                <div class="col-md">
-                                  <div class="form-floating">
-                                    <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-                                    <label for="floatingInputGrid">Pourcentage %</label>
-                                  </div>
-                                </div>
-                                <div class="col-md">
-                                  <div class="form-floating">
-                                    <input type="date" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-                                    <label for="floatingInputGrid">Date d'expiration</label>
-                                  </div>
-                                </div>
-                              </div>
-                              <button type="submit" class="btn bg-color w-100 rounded-pill text-white">Faite la promotion</button>
-                            </form>
-                          </div>
-                        </div>
                         <div class="card">
                           <div class="card-body">
                             This is some text within a card body.
@@ -211,33 +186,6 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- =====QUILL EDITOR====-->
-      <script>
-         $('.summernote').summernote({
-           placeholder: 'Donnez les informations aux utilisateurs sur vous',
-           tabsize: 2,
-           height: 120,
-           toolbar: [
-             ['style', ['style']],
-             ['font', ['bold', 'underline', 'clear', 'fontsize']],
-             ['color', ['forecolor', 'backcolor']],
-             ['para', ['ul', 'ol', 'paragraph']],
-             ['table', ['table']],
-             ['insert', ['link', 'picture', 'video', 'hr']],
-             ['view', ['help']],
-           ]
-         });
-       </script>
-
-       <script>
-         jQuery(function($) {
-             var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
-               $(".active-btn > li > a").each(function(){
-               if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-               $(this).addClass("mn-225-active");
-               // $(this).parent("li").addClass("active");
-             })
-         });
-       </script>
 
   </body>
 </html>

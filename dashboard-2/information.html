@@ -539,20 +539,11 @@
 
     <!-- following theme script is needed to use the Font Awesome 5.x theme (`fas`). Uncomment if needed. -->
     <!-- script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/themes/fas/theme.min.js"></script -->
+    <script src="../js-doc/app.js"></script>
 
     <!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/locales/LANG.js"></script>
     <!-- =====QUILL EDITOR====-->
-
-    <!--script>
-        $(document).ready(function() {
-            // initialize with defaults
-            $("#input-id").fileinput();
-
-            // with plugin options
-            $("#input-id").fileinput({'uploadUrl': '/path/to/your-upload-api', 'previewFileType': 'any'});
-        });
-      </script-->
 
       <script>
          $('.summernote').summernote({
@@ -571,15 +562,6 @@
          });
        </script>
 
-       <script>
-         jQuery(function($) {
-             var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
-               $(".active-btn > li > a").each(function(){
-               if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-               $(this).addClass("mn-225-active");
-               // $(this).parent("li").addClass("active");
-             })
-         });
-       </script>
+
   </body>
 </html>
