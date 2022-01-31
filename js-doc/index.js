@@ -185,7 +185,7 @@ $(document).ready(function(){
       else {
           // Go through and add each event as a card to the events container
           for(var i=0; i<events.length; i++) {
-              var event_card = $("<div class='event-card' data-bs-toggle='modal' data-bs-target='#exampleModal2'></div>");
+              var event_card = $("<div class='event-card' data-bs-toggle='modal' data-bs-target='#reserve_id'></div>");
               var event_name = $("<div class='event-name'>"+events[i]["occasion"]+":</div>");
               var event_count = $("<div class='event-count'>"+events[i]["invited_count"]+" Invités</div>");
               if(events[i]["cancelled"]===true) {

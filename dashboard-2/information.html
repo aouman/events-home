@@ -113,8 +113,8 @@
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Paramettre</a></li>
+                        <li><a class="dropdown-item" href="#">Deconnection</a></li>
                       </ul>
                     </div>
                   </div>
@@ -144,10 +144,10 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Donner une description de votre établissement</p>
+                              <p class="fs-5 fw-bold">Donner une description de votre établissement</p>
                               <form>
                                 <div class="mb-3">
-                                  <label for="exampleFormControlTextarea1" class="form-label">Information</label>
+                                  <label class="form-label">Information</label>
                                   <div class="summernote"></div>
                                 </div>
                                 <label class="mb-3">Cocher les évènements que vous organisez.</label>
@@ -191,7 +191,27 @@
                                     </label>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <div class="row">
+                                  <div class="form-check mb-3 col-md-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Cérémonie de récompense
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3 col-md-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Baptème
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3 col-md-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Autres
+                                    </label>
+                                  </div>
+                                </div>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -204,23 +224,24 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Salles & espaces que vous disposez.</p>
+                              <p class="fs-5 fw-bold">Salles & espaces que vous disposez.</p>
                               <form>
                                 <div class="row g-3 align-items-center">
                                   <div class="col-auto mb-3">
-                                    <label for="inputPassword6" class="col-form-label">Nombre de Salles</label>
+                                    <label class="col-form-label">Nombre de Salles</label>
                                   </div>
                                   <div class="col-auto mb-3">
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                      <option selected>Open this select menu</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                                    <select class="form-select mb-3" id="search_rooms_select">
+                                      <option value="1" selected>1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
                                     </select>
                                   </div>
                                 </div>
 
-                                <div class="card mb-3 border-0 shadow-sm p-md-3">
+                                <div class="card mb-3 border-0 shadow-sm p-md-3" id="room-1">
                                   <div class="card-body">
                                     <div class="mb-3 row">
                                       <label for="inputPassword" class="col-sm-3 col-form-label">Nom de l'espace</label>
@@ -250,7 +271,7 @@
                                   </div>
                                 </div>
 
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -263,20 +284,20 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Les équipements misent à la disposition des clients.</p>
+                              <p class="fs-5 fw-bold">Les équipements misent à la disposition des clients.</p>
                               <form>
-                                <select class="form-select w-50 mb-3" aria-label="Default select example">
+                                <select class="form-select w-50 mb-3" id="services">
                                   <option selected>Avez-vous des services annexe?</option>
-                                  <option value="1">Non</option>
-                                  <option value="2">Oui</option>
+                                  <option value="No">Non</option>
+                                  <option value="Yes">Oui</option>
                                 </select>
-                                <div class="card mb-3 shadow-sm border-0">
+                                <div class="card mb-3 shadow-sm border-0 vue_service" id="vues_services">
                                   <div class="card-body">
                                     <h5 class="mb-md-4">Cochez les équipements que vous disposez</h5>
                                     <div class="row bg-light p-md-4 mb-4">
                                       <div class="col-auto mb-3 mb-3">
                                         <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                          <input class="form-check-input" type="checkbox">
                                           <label class="form-check-label" for="flexCheckDefault">
                                             Tableau blanc
                                           </label>
@@ -377,7 +398,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -390,7 +411,7 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Donner Les détails pour la restauration</p>
+                              <p class="fs-5 fw-bold">Donner Les détails pour la restauration</p>
                               <form>
                                 <select class="form-select w-50 mb-3" aria-label="Default select example">
                                   <option selected>Le traiteur est-il imposé par l'établissement?</option>
@@ -403,7 +424,7 @@
                                     <div class="summernote"></div>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -415,7 +436,7 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Donnez vos tarifs</p>
+                              <p class="fs-5 fw-bold">Donnez vos tarifs</p>
                               <form>
                                 <div class="row mb-3">
                                   <label for="staticNumber" class="me-3 mb-3">Donner une grille tarifaire</label>
@@ -434,13 +455,21 @@
                                     </div>
                                   </div>
                                 </div>
+                                <div class="mb-3">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                      Selectionner s'il y a devis sur demande
+                                    </label>
+                                  </div>
+                                </div>
                                 <div class="row">
                                   <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Autres informations sur vos tarifs</label>
                                     <div class="summernote"></div>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -452,7 +481,7 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0" style="">
                             <div class="card-body">
-                              <p class="">Donnez votre localisation</p>
+                              <p class="fs-5 fw-bold">Donnez votre localisation</p>
                               <form>
                                 <div class="row">
                                   <div class="mb-3">
@@ -460,7 +489,7 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
@@ -472,19 +501,28 @@
                         <div class="card-body">
                           <div class="card shadow-sm p-3 mx-auto border-0 mb-3" style="">
                             <div class="card-body">
-                              <p class="">Mettez les images de votre espace ou de votre menu</p>
+                              <p class="fs-5 fw-bold">Mettez des images de votre espace ou de votre menu</p>
                               <form>
-                                <div class="mb-3">
-                                  <input id="input-id" name="file-data" type="file">
-                                  <label for="formFileMultiple" class="form-label">Ajouter des photos</label>
-                                  <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                <div class="card mb-3">
+                                  <div class="card-body">
+                                    <p class="mb-0">Ajouter un ou plusieurs images en même Temps</p>
+                                    <div class="upload__box">
+                                      <div class="upload__btn-box">
+                                        <label class=" btn bg-color upload__btn">
+                                          <p class="mb-0">Ajouter des photos</p>
+                                          <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                                        </label>
+                                      </div>
+                                      <div class="upload__img-wrap"></div>
+                                    </div>
+                                  </div>
                                 </div>
-                                <button type="submit" class="btn rounded-pill bd-color shadow-sm">Enregistrez</button>
+                                <button type="submit" class="btn rounded-pill bd-color shadow-sm w-25">Enregistrez</button>
                               </form>
                             </div>
                           </div>
                           <div class="text-center">
-                            <a href="#" class="btn rounded-pill bd-color shadow-sm">
+                            <a href="#" class="btn rounded-pill bd-color shadow-sm px-md-5">
                               Voir toutes vos informations avant de les publier
                             </a>
                           </div>

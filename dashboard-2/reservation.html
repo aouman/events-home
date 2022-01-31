@@ -1,4 +1,4 @@
-<!doctype html>
+reserve_id<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -288,32 +288,33 @@
                         <div class="tab-pane fade" id="pills-list" role="tabpanel" aria-labelledby="pills-list-tab">
                           <div class="card p-3 border-bottom-0 border-start-0 border-end-0 rounded-0 bd-color-light">
                             <div class="card-body">
+                              <form class="shadow-sm p-3 rounded-pill mb-3">
+                                <div class="input-group">
+                                  <button class="btn bg-color border-0 text-white" type="button"><i class="bi bi-search"></i></button>
+                                  <input type="text" class="form-control w-50" placeholder="" name="search" id="search-box">
+                                  <select class="form-select w-25 bd-color" id="search-filter">
+                                    <option value="listitem" selected>Filtrer par :</option>
+                                    <option value="names">Nom</option>
+                                    <option value="name_sp">Nom d'espace reservé</option>
+                                    <option value="date">Date</option>
+                                  </select>
+                                </div>
+                              </form>
                               <table class="table">
-                                <thead>
+                                <thead class="bd-color bg-color text-white shadow-sm">
                                   <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Nom et Prénoms</th>
+                                    <th scope="col">Nom d'espace reservé</th>
+                                    <th scope="col">Date</th>
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
+                                  <tr class="listitem">
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
+                                    <td class="td-name" title="Name">Mark-m</td>
+                                    <td class="td-space" title="NameSp">Otto</td>
+                                    <td class="td-date" title="Date">22/11/2020</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -331,11 +332,11 @@
           </div>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="reserve_id" tabindex="-1" aria-labelledby="reserve_idLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header bg-color text-white">
-                  <h5 class="modal-title w-100 text-center" id="exampleModalLabel">Information du client</h5>
+                  <h5 class="modal-title w-100 text-center" id="reserve_idLabel">Information du client</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
