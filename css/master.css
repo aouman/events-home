@@ -182,10 +182,54 @@ hr:not([size]) {
 .vue_service{
   display: none;
 }
+/*vue for information*/
+.center-p
+{
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  padding: 30px;
+}
+
+.bg-img-vu{
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+}
+
+.title-size{
+  background-color: #0000004f;
+}
+
+.img-roun{
+  border-radius: 10px;
+}
+
+.box-size-15{
+  width: 15%;
+}
+
+.box-size-20{
+  width: 20%;
+}
+
+.position-box-2225{
+  top: -40px;
+}
+
+.salle-name-js25 p{
+  border-bottom: 1px solid #d3d3d3;
+}
 /*creation de tache*/
 
 .task2_category {
   width: 30%;
+  background-color: #ff45000f;
+}
+
+.delete_category {
+  right: 10px;
+  top: 10px;
 }
 
 /*add multiple image*/
