@@ -217,6 +217,12 @@ hr:not([size]) {
   top: -40px;
 }
 
+.position-box-carte{
+  top: -25px;
+  right: 25px;
+  width: 35%;
+}
+
 .salle-name-js25 p{
   border-bottom: 1px solid #d3d3d3;
 }
