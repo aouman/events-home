@@ -117,3 +117,36 @@ a{
 .tr-25 img{
   width: 125px;
 }
+
+.bg-img-all {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-info-rad{
+  border-radius: 150px;
+}
+
+.text-size-14{
+  font-size: 14px;
+}
+
+.img-profit-sall-226 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 1px 4px 0 rgb(0 0 0 / 20%), 0px 0px 10px 0px rgb(0 0 0 / 19%);
+}
+
+.border-000{
+  border: 1.5px solid #e9ecefab;
+}
+
+.shadows-335 {
+  box-shadow: 0 -4px 10px 0px #dee2e63d, -3px 6px 20px 0 rgb(227 223 223 / 34%);
+}
+.title-size {
+  background-color: linear-gradient(90deg, #000000cc, rgb(0 0 0 / 20%));
+}

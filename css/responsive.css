@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
   .bg-imag-1 {
     background-size: cover;
     background-position: bottom;
@@ -8,7 +8,7 @@
     display: none;
   }
   .title-pr {
-    font-size: 40px;
+    font-size: 35px!important;
   }
 
   .search {
@@ -53,12 +53,16 @@
     top: 18px;
     font-size: 20px;
   }
+
+  .box-22{
+    margin: 0 auto;
+  }
 }
 
-@media only screen and (min-width: 768px){
+/*@media only screen and (min-width: 768px){
   .py-md-13 {
       padding-top: 13px;
       padding-bottom: 13px;
   }
 
-}
+}*/
